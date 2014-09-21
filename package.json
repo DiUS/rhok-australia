@@ -1,19 +1,21 @@
 {
   "main": "app.js",
   "version": "0.0.1",
+  "bin": {
+    "rhok": "./bin/server"
+  },
   "scripts": {
+    "start": "node ./bin/server",
     "test": "mocha -R spec"
   },
   "devDependencies": {
-    "chai": "latest",
-    "sinon": "latest",
-    "should": "latest",
-    "mocha": "latest"
+    "frisby": "latest",
+    "jasmine-node": "latest"
   },
   "name": "rhok-australia",
   "description": "API for RHoK Australia",
   "directories": {
-    "test": "test"
+    "test": "spec"
   },
   "repository": {
     "type": "git",
@@ -26,7 +28,6 @@
     "api",
     "random",
     "hacks",
-    "of",
     "kindness"
   ],
   "author": "Tarcio Saraiva <tarcio@gmail.com> (http://tarciosaraiva.com)",
@@ -36,6 +37,8 @@
   },
   "homepage": "https://github.com/DiUS/rhok-australia",
   "dependencies": {
-    "restify": "^2.8.1"
+    "nconf": "latest",
+    "restify": "~2.8.x",
+    "vogels": "~0.12.x"
   }
 }
